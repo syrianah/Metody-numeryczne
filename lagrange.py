@@ -30,12 +30,19 @@ class Lagrange:
                     var2 = self.lists[i+1]
                 else: break
                 while j < len(var1)-1:
-                    if j < len(var1)-1:
-                        wynik = (var2[j+1] - var2[j])/ (var1[j+1] - var1[j])
-                        self.lists[i+2].append(wynik)
+                    if j < len(var2)-1:
+                        wynik = (var2[j+1] - var2[j]) / (var1[j+1] - var1[j])
+                        if m-1 > i+2:
+                            self.lists[i+2].append(wynik)
+                        else: break
                         j += 1
-                    else: break
+                        # print(j)
+                        # print(self.lists)
+                    else:
+                        j = 0
+                        break
                 i += 1
+                j = 0
             wynik = (last[1] - last[0]) / (x[len(x)-1] - x[0])
             self.lists[len(self.lists)-1].append(wynik)
             return self.lists
@@ -43,7 +50,7 @@ class Lagrange:
     def __repr__(self):
         return str(self.lists)
 
-
-a = Lagrange([2, 5/2, 4], [0.5, 2/5, 1/4])
+a = Lagrange([1, 2, 5, 6], [0, 4, 6, -2])
+# a = Lagrange([2, 5/2, 4], [0.5, 2/5, 1/4])
 b = a.loop()
 print(b)
