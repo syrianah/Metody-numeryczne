@@ -4,6 +4,7 @@ class Lagrange:
             self.x_array = x_array
             self.y_array = y_array
             self.lists = [[] for _ in range(len(self.x_array)+1)]
+            self.pol = []
         else: exit()
 
     def first(self):
@@ -16,7 +17,6 @@ class Lagrange:
 
     def loop(self):
         self.first()
-        n = len(self.x_array)
         m = len(self.lists)
         j = 0
         last = self.lists[m-2]
@@ -45,12 +45,26 @@ class Lagrange:
                 j = 0
             wynik = (last[1] - last[0]) / (x[len(x)-1] - x[0])
             self.lists[len(self.lists)-1].append(wynik)
-            return self.lists
+            self.polym()
+            return "{}{}".format(self.lists, self.pol)
+
+    def polym(self):
+        for i in range(len(self.lists)):
+            if i == 1:
+                continue
+            else:
+                var = self.lists[i]
+                print(var)
+                w = var[0]
+                print(w)
+                self.pol.append(w)
+        return self.pol
+            
 
     def __repr__(self):
         return str(self.lists)
 
-a = Lagrange([1, 2, 5, 6], [0, 4, 6, -2])
-# a = Lagrange([2, 5/2, 4], [0.5, 2/5, 1/4])
+# a = Lagrange([1, 2, 5, 6], [0, 4, 6, -2])
+a = Lagrange([2, 5/2, 4], [0.5, 2/5, 1/4])
 b = a.loop()
 print(b)
