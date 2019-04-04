@@ -5,6 +5,7 @@ class Lagrange:
             self.y_array = y_array
             self.lists = [[] for _ in range(len(self.x_array)+1)]
             self.pol = []
+            self.wynik = 0
         else: exit()
 
     def first(self):
@@ -17,54 +18,71 @@ class Lagrange:
 
     def loop(self):
         self.first()
-        m = len(self.lists)
-        j = 0
-        last = self.lists[m-2]
-        x = self.lists[0]
-        if m > 3:
-            i = 0
-            j = 0
-            while i < m-1:
-                if i < m-1:
-                    var1 = self.lists[i]
-                    var2 = self.lists[i+1]
-                else: break
-                while j < len(var1)-1:
-                    if j < len(var2)-1:
-                        wynik = (var2[j+1] - var2[j]) / (var1[j+1] - var1[j])
-                        if m-1 > i+2:
-                            self.lists[i+2].append(wynik)
-                        else: break
-                        j += 1
-                        # print(j)
-                        # print(self.lists)
-                    else:
-                        j = 0
-                        break
-                i += 1
-                j = 0
-            wynik = (last[1] - last[0]) / (x[len(x)-1] - x[0])
-            self.lists[len(self.lists)-1].append(wynik)
-            self.polym()
-            return "{}{}".format(self.lists, self.pol)
+        k = 0
+        c = 0
+        for i in range(len(self.lists)-1):
+            # print(i)
+            x = self.lists[0]
+            val = self.lists[i+1]
+            # print(val)
+            for j in range(len(val)-1):
+                # if i+k+1 < len(x)-1:
+                wynik = (val[j+1] - val[j]) / (x[j+k+1] - x[j+k-c])
+                # print(val[j+1])
+                # print(val[j])
+                # print(x[j+k+1])
+                # print(x[j+k-c])
+                # print(wynik)
+                self.lists[i+2].append(wynik)
+                # else: continue
+            k += 1
+            c += 1
+        self.polym()
+        return self.lists, self.pol
 
     def polym(self):
         for i in range(len(self.lists)):
-            if i == 1:
+            if i == 0:
                 continue
             else:
                 var = self.lists[i]
-                print(var)
+                # print(var)
                 w = var[0]
-                print(w)
+                # print(w)
                 self.pol.append(w)
         return self.pol
-            
+
+    def calculate(self, x):
+        self.loop()
+        x_arr = self.lists[0]
+        xd = []
+        for i in range(len(x_arr)-1):
+            # print(x_arr[i])
+            if i == 0:
+                p = x - x_arr[0]
+                xd.append(p)
+            else:
+                w = xd[i-1] * (x - x_arr[i])
+                # print(w)
+                xd.append(w)
+        # print(xd)
+        for i in range(len(self.pol)):
+            if i == 0:
+                self.wynik = self.wynik + self.pol[0]
+            else:
+                # print(self.pol[i] * xd[i-1])
+                self.wynik = self.wynik + (self.pol[i] * xd[i-1])
+            # print(self.wynik)
+        return self.lists, self.pol, self.wynik
+
 
     def __repr__(self):
-        return str(self.lists)
+        return "{}{}{}".format(self.lists, self.pol, self.wynik)
 
+
+a = Lagrange([0, 1, 2, 4, 5], [7, 3, -1, 3, -3])
 # a = Lagrange([1, 2, 5, 6], [0, 4, 6, -2])
-a = Lagrange([2, 5/2, 4], [0.5, 2/5, 1/4])
-b = a.loop()
+# a = Lagrange([2, 5/2, 4], [0.5, 2/5, 1/4])
+# b = a.loop()
+b = a.calculate(3)
 print(b)
