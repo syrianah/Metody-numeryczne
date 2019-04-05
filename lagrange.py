@@ -80,9 +80,10 @@ class Lagrange:
         return "{}{}{}".format(self.lists, self.pol, self.wynik)
 
 
-a = Lagrange([0, 1, 2, 4, 5], [7, 3, -1, 3, -3])
+a = Lagrange([0, 1, 2, 4, 6, 8, 10, 13, 14], [2, 3, 5, 9, 12, 13, 15, 17, 19])
+# a = Lagrange([0, 1, 2, 4, 5], [7, 3, -1, 3, -3])
 # a = Lagrange([1, 2, 5, 6], [0, 4, 6, -2])
 # a = Lagrange([2, 5/2, 4], [0.5, 2/5, 1/4])
-# b = a.loop()
-b = a.calculate(3)
+b = a.loop()
+# b = a.calculate(3)
 print(b)

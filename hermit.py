@@ -1,3 +1,5 @@
+import math
+
 class Hermit:
     def __init__(self, x_array, y_array, der_array):
         if len(x_array) == len(y_array):
@@ -28,7 +30,12 @@ class Hermit:
             # print(val)
             for j in range(len(val)-1):
                 # if i+k+1 < len(x)-1:
-                wynik = (val[j+1] - val[j]) / (x[j+k+1] - x[j+k-c])
+                if (x[j+k+1] - x[j+k-c] == 0):
+                    for i in range(len(self.der_array)-1):
+                        wynik = self.der_array[i] / math.factorial(self.der_array[i+1])
+                else:
+                    wynik = (val[j+1] - val[j]) / (x[j+k+1] - x[j+k-c])
+
                 # print(val[j+1])
                 # print(val[j])
                 # print(x[j+k+1])
@@ -74,14 +81,15 @@ class Hermit:
                 # print(self.pol[i] * xd[i-1])
                 self.wynik = self.wynik + (self.pol[i] * xd[i-1])
             # print(self.wynik)
-        return self.lists, self.pol, self.wynik
+        return self.lists, self.wynik
 
 
     def __repr__(self):
-        return "{}{}{}".format(self.lists, self.pol, self.wynik)
+        return "{}{}".format(self.lists, self.wynik)
 
 
-a = Hermit([0, 1, 2, 4, 5], [7, 3, -1, 3, -3], [3, 1, 1, 2])
+a = Hermit([0, 1, 2, 4, 6, 8, 10, 13, 14], [2, 3, 5, 9, 12, 13, 15, 17, 19], [3, 1, 1, 1, 1, 1, 2, 2])
+# a = Hermit([0, 1, 2, 4, 5], [7, 3, -1, 3, -3], [3, 1, 1, 2])
 # a = Lagrange([1, 2, 5, 6], [0, 4, 6, -2])
 # a = Lagrange([2, 5/2, 4], [0.5, 2/5, 1/4])
 # b = a.loop()
