@@ -4,8 +4,7 @@ delta::AbstractFloat=eps(x),
 epsilon::AbstractFloat=eps(x),
 maxiter::Integer=100)
 fx = f(x)
-@printf("x0
-= %30.26f, f(x0 ) = %30.26f\n", x, fx)
+@printf("x0 = %30.26f, f(x0 ) = %30.26f\n", x, fx)
 for i in 1:maxiter
 if abs(fx) < epsilon
 return x
