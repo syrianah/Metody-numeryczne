@@ -12,8 +12,10 @@ function secant(f::Function, a::Number, b::Number;
         a = b
         fa = fb
     end
-    println(0, a, fa)
-    println(1, b, fb)
+    @printf("a    = %30.26f, f(a   ) = %30.26f\n", a, fa)
+    @printf("b    = %30.26f, f(b   ) = %30.26f\n", b, fb)
+    # println(0, a, fa)
+    # println(1, b, fb)
     for i in 2:maxiter
         if abs(fa) > abs(fb)
             a = b
@@ -28,7 +30,8 @@ function secant(f::Function, a::Number, b::Number;
         end
         a = a - d
         fa = f(a)
-        println(i, a, fa)
+        # println(i, a, fa)
+        @printf("x%-3d = %30.26f, f(x%-3d) = %30.26f\n", i, a, i, fa)
     end
 end
 

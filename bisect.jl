@@ -34,8 +34,8 @@ end
 
 
 # Zadanie 7.6
-# f(x) = x^3 + x - 1
-# bisect(f, 0, 1)
+f(x) = x^3 + x - 1
+bisect(f, 0, 1)
 
 # Zadanie 7.7
 # f(x) = 1 / x - tan(x)
