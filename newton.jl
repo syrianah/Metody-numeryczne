@@ -23,4 +23,5 @@ end
 
 # Zadanie 7.6
 f(x) = x^3 + x - 1
-newton(f, 0, 1)
+fp(x) = 3 * x^2 + 1
+newton(f, fp, 0)
