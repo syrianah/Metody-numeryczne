@@ -1,51 +1,42 @@
 using LinearAlgebra
 using Printf
 
-function suma(A::AbstractMatrix, x::Array{Float64,1};)
-    n = length(A)
-    m = length(x)
-    for i in 1:3
-        for j in 1:3
-            temp = 0
-            temp = temp + A[i][j] * x[j]
-        end
-    end
-end
-
 function jacobi(A::AbstractMatrix, b::Array{Float64,1};
             delta::Number=10^-10,
             epsilon::Number=1/2*10^-4,
             maxiter::Integer=100)
 
-    # n = length(b)
-    x = zeros(3)
-    # println(typeof(x))
+    n = length(b)
+    x = zeros(n)
+    println()
+    diag = Diagonal(A)
+    println(broadcast(abs, diag))
+    println(diag[1][1], inv(diag))
     for k in 1:maxiter
         y = x
-        for i in 1:3
+        for i in 1:n
             sum = b[i]
-            diag = A[i][i]
-            if abs(diag) < epsilon
-                println("diagonal element too small")
-            end
-            for j in 1:3
+            # if broadcast(abs, diag) < epsilon
+            #     println("diagonal element too small")
+            # end
+            for j in 1:n
                 if j != i
-                    sum = sum - A[i][j] * y[j]
+                    @inbounds sum = sum - diag[i][j] * y[i]
                 end
             end
-            x[i] = sum / diag
+            x[i] = \(sum, diag)
         end
-        println(k, x)
-        if norm(x - y) < epsilon
-            println(k, x)
-        end
+        # println(k, x)
+        # if norm(x - y) < epsilon
+        #     println(k, x)
+        # end
     end
-    print(x)
+    println(x)
 end
 
 
 A = [1.0 9 1; 4 1 -1; 1 -3 12]
-b = [5.0; 3; 31;]
+b = [5.0, 3, 31,]
 
 jacobi(A, b)
 
