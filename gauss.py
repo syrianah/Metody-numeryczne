@@ -1,6 +1,6 @@
 import numpy as np
 
-class Jacobi:
+class Gauss:
     def __init__(self, A, b):
         self.maxiter = 100
         self.delta = 10**-10
@@ -18,9 +18,10 @@ class Jacobi:
                 diag = self.A[i][i]
                 if abs(diag) < self.delta:
                     print("za małe elementy na przekątnej")
-                for j in range(n):
-                    if j != i:
-                        sum = sum - self.A[i][j] * y[j]
+                for j in range(i-1):
+                    sum = sum - self.A[i][j] * x[i]
+                for j in range(i+1, n):
+                    sum = sum - self.A[i][j] * x[i]
                 x[i] = sum / diag
                 print(k, x)
                 if np.linalg.norm(x - y) < self.epsilon:
@@ -32,5 +33,5 @@ Q = np.array([[1, 9, 1],
 
 b = np.array([5, 3, 31])
 
-x = Jacobi(Q, b)
+x = Gauss(Q, b)
 x.calculate()
