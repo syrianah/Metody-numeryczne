@@ -24,14 +24,14 @@ function jacobi(A::AbstractMatrix, b::Array{Float64,1};
                     @inbounds sum = sum - diag[i][j] * y[i]
                 end
             end
-            x[i] = \(sum, diag)
+            # x[i] = \(sum, diag)
         end
         # println(k, x)
         # if norm(x - y) < epsilon
         #     println(k, x)
         # end
     end
-    println(x)
+    println(sum)
 end
 
 

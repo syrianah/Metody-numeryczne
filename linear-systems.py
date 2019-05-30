@@ -5,6 +5,7 @@ class Solution:
         self.maxiter = 100
         self.delta = 10**-10
         self.epsilon = 1/2*10**-4
+        self.omega = 2
         self.A = A
         self.b = b
         self.x = np.zeros(len(b))
@@ -23,6 +24,24 @@ class Solution:
                 for j in range(i+1, self.n):
                     sum = sum - np.multiply(self.A[i][j], self.x[i])
                 self.x[i] = sum / diag
+                print(k, self.x)
+                if np.linalg.norm(self.x - y) < self.epsilon:
+                    print(k, self.x)
+
+    def sor(self):
+        for k in range(1, self.maxiter):
+            y = self.x
+            for i in range(self.n):
+                sum = self.b[i]
+                diag = self.A[i][i]
+                if abs(diag) < self.delta:
+                    print("za małe elementy na przekątnej")
+                for j in range(i-1):
+                    sum = sum - np.multiply(self.A[i][j], self.x[i])
+                for j in range(i+1, self.n):
+                    sum = sum - np.multiply(self.A[i][j], self.x[i])
+                self.x[i] = sum / diag
+                self.x[i] = self.omega * self.x[i] + (1 - self.omega) * y[i]
                 print(k, self.x)
                 if np.linalg.norm(self.x - y) < self.epsilon:
                     print(k, self.x)
@@ -68,3 +87,4 @@ x = Solution(Q, b)
 # x.richardson()
 # x.jacobi()
 # x.gauss()
+x.sor()
