@@ -7,7 +7,7 @@ def fp(x):
 def newton(x):
     x_tab = []
     x_tab.append(x)
-    for i in range(4):
+    for i in range(3):
         temp =  x_tab[i] - f(x_tab[i]) / fp(x_tab[i])
         x_tab.append(temp)
     return x_tab
