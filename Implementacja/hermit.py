@@ -4,6 +4,9 @@ def translate(l):
     x_array = []
     y_array = []
     der_array = []
+    count = 2
+    index = 2
+    # print(len(l))
     for i in range(0, len(l)):
         point = l[i][0]
         # print(point)
@@ -12,12 +15,21 @@ def translate(l):
         for k in range(0, len(l[i])-1):
             x_array.append(point)
             y_array.append(value)
-        for j in range(2, len(l[i])):
-            der_val = l[i][j]
-            print(der_val)
-            der_array.append(der_val)
-            der_deg = j - 1
-            der_array.append(der_deg)
+        # print(l[i][3])
+        for h in range(len(l[i])-2):
+            for temp in l:
+                if count >= len(l[i]):
+                    break
+                else:
+                    der_val = temp[count]
+                    der_deg = count - 1
+                    # print(count)
+                    # print(der_val, der_deg)
+                    for i in range(index):
+                        der_array.append(der_val)
+                        der_array.append(der_deg)
+            count += 1
+            index -= 1
     # return x_array, y_array, der_array
     return Hermit(x_array, y_array, der_array)
             
@@ -46,6 +58,7 @@ class Hermit:
         self.first()
         k = 0
         c = 0
+        z = 0
         for i in range(len(self.lists)-1):
             # print(i)
             x = self.lists[0]
@@ -56,10 +69,9 @@ class Hermit:
                 # if i+k+1 > len(val)-1:
                 #     break               
                 if (x[j+k+1] - x[j+k-c] == 0 and val[j+1] - val[j] == 0):
-                    for z in range(len(self.der_array)-1):
-                        wynik = self.der_array[z] / math.factorial(self.der_array[z+1])
-                        z = z + 1
-                        # print(wynik)
+                    wynik = self.der_array[z] / math.factorial(self.der_array[z+1])
+                    z = z + 2
+                    # print(wynik)
                 else:
                     wynik = (val[j+1] - val[j]) / (x[j+k+1] - x[j+k-c])
                     # print(wynik)
@@ -116,7 +128,7 @@ class Hermit:
         return "{}{}".format(self.lists, self.wynik)
 
 
-# a = Hermit([0, 0, 1, 2, 4, 4, 5, 5, 5], [7, 7, 3, -1, 3, 3, -3, -3, -3], [3, 1, 1, 1, 1, 1, 2, 2])
+# a = Hermit([0, 0, 1, 2, 4, 4, 5, 5, 5], [7, 7, 3, -1, 3, 3, -3, -3, -3], [3, 1, 1, 1, 1, 1, 1, 1, 2, 2])
 # a = Hermit([0, 1, 2, 4, 5], [7, 3, -1, 3, -3], [3, 1, 1, 2])
 # a = Lagrange([1, 2, 5, 6], [0, 4, 6, -2])
 # a = Lagrange([2, 5/2, 4], [0.5, 2/5, 1/4])
@@ -125,6 +137,16 @@ class Hermit:
 # print(b)
 # print(translate([[0, 7, 3], [1, 3], [2, -1], [4, 3, 1], [5, -3, 1, 2]]))
 
-a = translate([[0, 7, 3], [1, 3], [2, -1], [4, 3, 1], [5, -3, 1, 2]])
-b = a.calculate(3)
+# a = translate([[0, 7, 3], [1, 3], [2, -1], [4, 3, 1], [5, -3, 1, 2]])
+# a = translate([[-1, 2, -8, 56], [0, 1, 0, 0], [1, 2, 8, 56]])
+# print(translate([[-1, 2, -8, 56], [0, 1, 0, 0], [1, 2, 8, 56]]))
+# a = Hermit([-1, -1, -1, 0, 0, 0, 1, 1, 1], [2, 2, 2, 1, 1, 1, 2, 2, 2], [-8, 1, -8, 1, 0, 1, 0, 1, 8, 1, 8, 1, 56, 2, 0, 2, 56, 2])
+# b = a.calculate(3)
+# print(b)
+
+#Dane od prowadzącego
+a = translate([[0, 3, -7, 12], [1, 2, 11, 62]]) 
+# a = Hermit([0,0,0,1,1,1],[3,3,3,2,2,2],[-7,1,-7,1,11,1,11,1,12,2,62,2])
+# print(a)
+b = a.calculate(3) 
 print(b)
