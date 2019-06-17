@@ -16,8 +16,14 @@ def translate(l):
     x_array = []
     y_array = []
     der_array = []
+<<<<<<< HEAD
     k = 0
     print(l)
+=======
+    count = 2
+    index = 2
+    # print(len(l))
+>>>>>>> 62aac150b9c4afc8205a490956bfe9362edaf515
     for i in range(0, len(l)):
         point = l[i][0]
         # print(point)
@@ -26,6 +32,7 @@ def translate(l):
         for k in range(0, len(l[i])-1):
             x_array.append(point)
             y_array.append(value)
+<<<<<<< HEAD
 
     for temp in l:
         del temp[0]
@@ -58,6 +65,23 @@ def translate(l):
 
         S += 1
 
+=======
+        # print(l[i][3])
+        for h in range(len(l[i])-2):
+            for temp in l:
+                if count >= len(l[i]):
+                    break
+                else:
+                    der_val = temp[count]
+                    der_deg = count - 1
+                    # print(count)
+                    # print(der_val, der_deg)
+                    for i in range(index):
+                        der_array.append(der_val)
+                        der_array.append(der_deg)
+            count += 1
+            index -= 1
+>>>>>>> 62aac150b9c4afc8205a490956bfe9362edaf515
     # return x_array, y_array, der_array
     return Hermit(x_array, y_array, der_array)
 
@@ -173,6 +197,7 @@ class Hermit:
 # print(b)
 
 #Dane od prowadzącego
+<<<<<<< HEAD
 # a = translate([[0, 3, -7, 12], [1, 2, 11, 62]]) 
 # a = Hermit([0,0,0,1,1,1],[3,3,3,2,2,2],[-7,1,-7,1,11,1,11,1,12,2,62,2])
 # print(a)
@@ -198,3 +223,10 @@ print(a.calculate(3))
 # Zadanie 4.7
 # a = translate([[0,1,1,1,1,1]])
 # print(a.calculate(3))
+=======
+a = translate([[0, 3, -7, 12], [1, 2, 11, 62]]) 
+# a = Hermit([0,0,0,1,1,1],[3,3,3,2,2,2],[-7,1,-7,1,11,1,11,1,12,2,62,2])
+# print(a)
+b = a.calculate(3) 
+print(b)
+>>>>>>> 62aac150b9c4afc8205a490956bfe9362edaf515
