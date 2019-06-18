@@ -133,4 +133,58 @@
     \item  \textbf{Prosty wzór Simpsona - parabol: }
     \[S(f) = \frac{b-a}{6}(f(a) + 4f(\frac{a+b}{2}) + f(b))\]
 \end{itemize}
+
+\section{Metody iteracyjne}
+\begin{itemize}
+    \item \textbf{Metoda bisekcji (poławiania przedziału): }
+    \[x_k = \frac{a_k + b_k}{2}\]
+    \item \textbf{Metoda Newtona (Newtona-Raphsona, stycznych): }
+    \[x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}\]
+    \item \textbf{Metoda siecznych: }
+    \[x_{k+1} = x_k - (\frac{x_{k-1-x_k}}{f(x_{k-1}) - f(x_k)})f(x_k)\]
+    \item \textbf{Rząd metody: }załóżmy, że ciąg przybliżeń $x_{n+1} = F(x_n)$ jest zbieżny do $\alpha$, tzn.
+    \[lim_{i \to \infty} x_i = \alpha\]
+    Mówimy, że w punkcie $\alpha$ metoda iteracyjna ma wykładnik zbieżności p, jeżeli istnieje taka rzeczywista liczba $p \geq 1$, że 
+    \[\lim_{i\to\infty}\frac{|\mathcal{E}_{i+1}|}{|\mathcal{E}|^p} = \lim_{i\to\infty}\frac{|x_{i+1} - \alpha|}{|x_i - \alpha|^p} = c \neq 0\]
+\end{itemize}
+
+\section{Rozkład LU macierzy}
+\begin{itemize}
+    \item \textbf{Obliczanie wyznacznika: } \[det(A) = det(L) \cdot det(U)\]
+    \item \textbf{Obliczanie odwrotności macierzy: }\[A^-1 = (LU)^{-1} = L^{-1} \cdot U^{-1}\]
+\end{itemize}
+
+\section{Metody iteracyjne rozwiązywania układów algebraicznych}
+\begin{itemize}
+    \item \textbf{Uwaga }aby zapewnić istnienie rozwiązania układu $Ax = b$ dla dowolnego $b$ zakładamy, że macierz A jest nieosobliwa 
+    \item Chcemy rozwiązać $Ax = b$. Niech $A = L + D + U$ gdzie:
+    \begin{itemize}
+        \item $A$ macierz przedstawiająca nasz układ(wiersze składają się ze współczynników naszego układu)
+        \item $b$ macierz przedstawiająca nasze wartości(kolumna składająca się z wartości)
+        \item $L$ jest \textbf{macierzą dolno trójkątną} z zerami na głównej przekątnej
+        \item $D$ jest \textbf{macierzą diagonalną}
+        \item $U$ jest \textbf{macierzą górno trójkątną} z zerami na głównej przekątnej
+        \item \textbf{macierz nieosobliwa} jest to taka której wyróżnik jest różny od zera $det(A) \neg 0$
+    \end{itemize}
+    \item \textbf{Metoda Jacobiego: }zapisujemy nasz układ równań $Ax = b$ w następujący sposób
+    \[(L + D + U)x = b\]
+    co jest równoważne układowi
+    \[Dx = -(L+U) + b\].
+    Jeżeli $D$ jest macierzą nieosobliwą możemy otrzymać metodę
+    \[x^{(k)} = -D^{-1}(L+U)x^{k-1} + D^{-1}b\]
+    \textbf{Twierdzenie: }Jeżeli $A$ jest silnie diagonalnie dominująca, to dla każdego wektora początkowego $x^{(0)}$ metoda Jacobiego tworzy ciąg zbieżny do rozwiązania układu $Ax = b$
+    \item \textbf{Metoda Gaussa-Seidela: }zapisujemy nasz układ równań $Ax = b$ w następujący sposób
+    \[(L+D)x = -Ux + b\]
+    Jeżeli $L+D$ jest macierzą nieosobliwą, to otrzymujemy
+    \[x^{(k)} = -(L+D)^{-1}Ux^{(k-1)}+(L+D)^{-1}b\]
+    \textbf{Twierdzenie: }Jeżeli $A$ jest silnie diagonalnie dominująca, to dla każdego wektora początkowego $x^{(0)}$ metoda Gaussa-Seidela tworzy ciąg zbieżny do rozwiązania układu $Ax = b$
+    \item \textbf{Metoda SOR (nadrelaksacji): }Niech $A = L + D + U$ i $\omega \in \mathbb{R}$ jest postaci
+    \[x^{(k)} = G_{\omega}x^{(k-1)} + w_{\omega}\]
+    gdzie
+    \[G_{\omega} = (D+\omega L)^{-1}((1-\omega)D - \omega U)\]
+    i
+    \[w_{\omega} = \omega(D+\omega L)^{-1}b\].
+    \textbf{Twierdzenie: }Niech A będzie macierzą o dodatnich elementach diagolnych oraz $0<\omega < 2$. Metoda nadrelaksacji jest zbieżna dla dowolnego wektora początkowego $x^{(0)}$ wtedy i tylko wtedy, gdy $A$ jest symetryczna i dodatnio określona. 
+    \item \textbf{Twierdzenie: }Jeżeli $||I - C^{-1}|| < 1$ dla pewnej normy indukowanej macierzy, to ciąg określony równaniem $Cx^{(k)} = (C - A)x^{(k-1)} + b$ jest zbieżny do rozwiązania układu $Ax = b$ dla dowolnego wektora początkowego $x^{(0)}$.
+\end{itemize}
 \end{document}

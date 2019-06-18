@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  18 JUN 2019 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.8.27)  19 JUN 2019 00:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.tex"
-(/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.tex
+**/Users/syrianah/Metody-numeryczne/Teoria/Egzamin/egzamin.tex
+(/Users/syrianah/Metody-numeryczne/Teoria/Egzamin/egzamin.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
@@ -526,7 +526,7 @@ Package: tabto 2013/03/25  v 1.3  Another tabbing mechanism
 \CurrentLineWidth=\dimen141
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 35.
- (/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.aux)
+ (/Users/syrianah/Metody-numeryczne/Teoria/Egzamin/egzamin.aux)
 \openout1 = `egzamin.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
@@ -595,7 +595,7 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 41.
 LaTeX Info: Redefining \pageref on input line 41.
 LaTeX Info: Redefining \nameref on input line 41.
- (/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.out) (/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.out)
+ (/Users/syrianah/Metody-numeryczne/Teoria/Egzamin/egzamin.out) (/Users/syrianah/Metody-numeryczne/Teoria/Egzamin/egzamin.out)
 \@outlinefile=\write3
 \openout3 = `egzamin.out'.
 
@@ -664,30 +664,30 @@ LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <10.95> on input line 48.
  [1
 
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 136.
- [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 136.
- (/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 136.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 136.
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 190.
+ [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 190.
+ (/Users/syrianah/Metody-numeryczne/Teoria/Egzamin/egzamin.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 190.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 190.
 Package rerunfilecheck Info: File `egzamin.out' has not changed.
-(rerunfilecheck)             Checksum: 4B849D9813B4D55EDCCC1C4E7F9FB692;802.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 136.
+(rerunfilecheck)             Checksum: 2D912FB7B24B5F129B636F209A1685CE;1012.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 190.
  ) 
 Here is how much of TeX's memory you used:
- 8295 strings out of 492649
- 121480 string characters out of 6129622
- 216681 words of memory out of 5000000
- 11997 multiletter control sequences out of 15000+600000
+ 8302 strings out of 492649
+ 121368 string characters out of 6129622
+ 216682 words of memory out of 5000000
+ 12000 multiletter control sequences out of 15000+600000
  16281 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,6n,31p,374b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/pl/plms.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/pl/plmi.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/pl/plme.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.pdf" (3 pages, 153439 bytes).
+ 36i,6n,31p,358b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/pl/plms.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/pl/plmi.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/pl/plme.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on /Users/syrianah/Metody-numeryczne/Teoria/Egzamin/egzamin.pdf (4 pages, 167006 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 97 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 171 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
