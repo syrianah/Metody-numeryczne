@@ -1,0 +1,101 @@
+\documentclass[11pt]{article}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{mathtools}
+\usepackage{geometry}
+\usepackage{tabto}
+
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+ \hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+\title{\textbf{Metody numeryczne}}
+\author{Wojciech Kubiak}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Arytmetyka zmiennopozycyjna, standard IEEE}
+\begin{itemize}
+    \item \textbf{Liczby maszynowe: }liczby rzeczywiste które można reprezentować w komputerze.
+    \item \textbf{Reprezentacja liczby zmiennoprzecinkowej: }w arytmetyce podwójnej precyzji jest to ciąg 64 bitów, w pojedyńczej jest to ciąg 32 bitów.
+    \item \textbf{Epsilon: }jest to najmniejsza dodatnia liczba spełniająca równanie $1 + \mathcal{E} \neq 1$
+    \item \textbf{Wykładnik po przesunięciu "shift": }Jest to liczba zapisana na 8 bitach może być z zakresu -126 do 127. Używa się go do kodowania z nadmiarem.
+\end{itemize}
+
+\section{Nadmiar i niedomiar}
+\begin{itemize}
+    \item \textbf{Nadmiar: }jeżeli w czasie obliczeń liczba $x$ (np. wynik operacji arytmetycznych) znajdzie się poza dopuszczalnym zakresem liczb. Kończy działanie programu.
+    \item \textbf{Niedomiar: }automatycznie zapamiętywana jest liczba $x$ jako zero bez przerwania działania programu.
+\end{itemize}
+
+\section{Błąd względny, bezwzględny, zaokrąglenie do najbliższej liczby parzystej}
+\begin{itemize}
+    \item \textbf{Błąd względny: }\quad $|\frac{a - \tilde{a}}{a}|$
+    \item \textbf{Błąd bezwzględny: }\quad $|a-\tilde{a}|$
+    \item \textbf{Metoda zaokrąglenia do najbliższej pażystej: }redukuje błąd całkowity obliczeń z uwagi na statycznie równą liczbę zaokrągleń w góre i w dół.
+\end{itemize}
+
+\section{Źródła błędów}
+\begin{itemize}
+    \item \textbf{zaokrąglenia} (związane z pracą w arytmetyce o skończonej pozycji)
+    \item \textbf{obcięcia} (obliczeń do skończonej liczby kroków)
+    \item \textbf{niepewność danych} (pojawiająca się w przypadku pracy na danych związanych z problemiami praktycznymi np. pomiarami fizycznymi)
+\end{itemize}
+
+\section{Uwarunkowanie zadania}
+\begin{itemize}
+    \item \textbf{Definicja: }Jeżeli niewielka zmiana danych wejściowych powoduje duże błędy w wyniku mówimy że nasze zadanie jest źle uwarunkowane. Wielkość charakteryzująca wpływ tych zaburzeń nazywamy wskaźnikiem uwarunkowania zadania (ang. condition numbers). 
+    \item \textbf{Dla funkcji wielu zmiennych} $cond(f(x,y,\dots)) = \frac{\partial f}{\partial x} \cdot \frac{x}{f(x,y)} + \frac{\partial f}{\partial y} \cdot \frac{y}{f(x,y)}\dots$
+    \item \textbf{Dla iloczynu skalarnego wektorów} $cond(x,y) = \frac{\langle |x|, |y| \rangle}{|\langle x, y \rangle|}$
+    \item \textbf{Dla macierzy} $cond(A) = \norm{A} \cdot \norm{A^{-1}}$
+\end{itemize}
+
+\section{Stabilność numeryczna algorytmu}
+\begin{itemize}
+    \item \textbf{Definicja: }algorytm jest niestabilny numerycznie jeżeli wprowadza duże błędy w dobrze uwarunkowanym zadaniu.
+    \item \textbf{Jak stworzyć algorytm stabilny numerycznie ?}
+    \begin{enumerate}
+        \item Unikaj odejmowania wielkości obarczonych błędem (o ile to możliwe).
+        \item Minimalizuj rozmiar wyników pośrednich względem wielkości rozwiązania.
+        \item Upewnij się, że metody obliczeń są równoważne numerycznie (nie tylko matematycznie).
+        \item Przedstawiaj aktualne wyrażenie jako \textbf{nowa wartość = poprzednia wartość + mała korekta} jeżeli mała korekta może być obliczona z dużą liczbą cyfr znaczących.
+    \end{enumerate}
+\end{itemize}
+\section{Ilorazy różnicowe}
+\begin{itemize}
+    \item \textbf{Iloraz różnicowy rzędu k: }\quad $f[x_0,x_1,\dots,x_k] = \sum_{k=0}^i \bigg[\frac{f(x_k)}{\prod_{j=0,j \neg k}^i(x_k - x_j)}\bigg]$
+    \item \textbf{Twierdzenie: }Wartość ilorazu różnicowego $f[x_0,x_1,\dots,x_k]$ nie zmienia się bezwzględu na permutacje argumentów $x_0,x_1,\dots,x_k$.
+\end{itemize}
+
+\section{Zalety postaci Lagrange’a i Newtona wielomianu interpolacyjnego}
+\begin{itemize}
+    \item \textbf{Zalety Newtona: } jest możliwość dodania nowego punktu bez zmiany wcześniej obliczonych wartości
+\end{itemize}
+\end{document}
