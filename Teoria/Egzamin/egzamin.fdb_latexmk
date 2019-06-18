@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1560815980 "/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.tex" "/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.pdf" "egzamin" 1560815985
-  "/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.aux" 1560815981 1695 05e0d3f7b5fca2e71ca7501f447b055b ""
-  "/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.tex" 1560815985 4646 5343f9938063738d727a79a0e134ded3 ""
+["pdflatex"] 1560871882 "/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.tex" "/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.pdf" "egzamin" 1560871883
+  "/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.aux" 1560871883 2102 0b88f9bbb23f73b00609e01e0de58354 ""
+  "/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.tex" 1560871882 6454 01ec432c178d7627280cae55594d510f ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1480098666 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1480098666 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/pl/plme.enc" 1480098668 3126 59f33ff3e396436ebc36f4e7b444d5c4 ""
@@ -122,13 +122,13 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "egzamin.aux" 1560815981 1695 05e0d3f7b5fca2e71ca7501f447b055b ""
-  "egzamin.out" 1560815981 579 11194c313a013f3e4f7edd40d360861b ""
-  "egzamin.tex" 1560815985 4646 5343f9938063738d727a79a0e134ded3 ""
+  "egzamin.aux" 1560871883 2102 0b88f9bbb23f73b00609e01e0de58354 ""
+  "egzamin.out" 1560871883 802 4b849d9813b4d55edccc1c4e7f9fb692 ""
+  "egzamin.tex" 1560871882 6454 01ec432c178d7627280cae55594d510f ""
   (generated)
+  "egzamin.out"
   "egzamin.aux"
-  "/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.log"
+  "egzamin.log"
   "/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.pdf"
   "egzamin.pdf"
-  "egzamin.log"
-  "egzamin.out"
+  "/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.log"

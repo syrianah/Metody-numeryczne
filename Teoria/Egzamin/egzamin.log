@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  18 JUN 2019 01:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  18 JUN 2019 17:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -664,30 +664,30 @@ LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <10.95> on input line 48.
  [1
 
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
- [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 136.
+ [3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 136.
  (/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 136.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 136.
 Package rerunfilecheck Info: File `egzamin.out' has not changed.
-(rerunfilecheck)             Checksum: 11194C313A013F3E4F7EDD40D360861B;579.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
+(rerunfilecheck)             Checksum: 4B849D9813B4D55EDCCC1C4E7F9FB692;802.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 136.
  ) 
 Here is how much of TeX's memory you used:
- 8283 strings out of 492649
- 121370 string characters out of 6129622
- 214680 words of memory out of 5000000
- 11993 multiletter control sequences out of 15000+600000
+ 8295 strings out of 492649
+ 121480 string characters out of 6129622
+ 216681 words of memory out of 5000000
+ 11997 multiletter control sequences out of 15000+600000
  16281 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,6n,31p,374b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,6n,31p,374b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/pl/plms.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/pl/plmi.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/pl/plme.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pl/plsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.pdf" (2 pages, 139786 bytes).
+Output written on "/Users/wojciechkubiak/Desktop/Metody numeryczne/Teoria/Egzamin/egzamin.pdf" (3 pages, 153439 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
- 15 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 150 PDF objects out of 1000 (max. 8388607)
+ 128 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 97 words of extra memory for PDF output out of 10000 (max. 10000000)
 

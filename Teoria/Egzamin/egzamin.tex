@@ -98,4 +98,39 @@
 \begin{itemize}
     \item \textbf{Zalety Newtona: } jest możliwość dodania nowego punktu bez zmiany wcześniej obliczonych wartości
 \end{itemize}
+
+\section{Błąd interpolacji}
+\begin{itemize}
+    \item \textbf{Twierdzenie: }Jeżeli p jest wielomianem stopnia co najwyżej n, interpolującym funkcję $f$ w $n+1$ parami różnych węzłach  $x_0,x_1,\dots,x_k$ 
+    należących do przedziału [a, b] i jeżeli $f^{n+1}$ jest ciągła to dla każdego $x$ z [a,b] istnieje $\xi$ z (a,b) taki, że
+    \[p(x) - f(x) = \omega_{n+1}(x) \frac{f^{n+1}(\xi)}{n+1}!\]
+    gdzie $\omega_{n+1}(x) = (x-x_0)(x-x_1)\dots(x-x_n)$ inczej:
+    \[|f(x) - L(x)| = \frac{M_{n+1}}{(n+1)!}\cdot (x-x_0)(x-x_1)\dots(x-x_n)\]
+    gdzie $M_{n+1} = max_{x \in [a,b]}|f^{n+1}(x)|$
+\end{itemize}
+
+\section{Optymalne węzły interpolacji}
+\begin{itemize}
+    \item \textbf{Twierdzenie: }Z twierzenia o błędzie interpolacyjnym wynika, że wielkość błędu zależy od $f(x)$ i od $\omega_{n+1}(x)$, który to wielomian zależy
+    od doboru węzłów interpolacji. Zatem można wybrać węzły $x_0,x_1,\dots,x_k$ minimalizujące 
+    \[\omega_{max} = max_{x \in [a,b]}|(x-x_0)(x-x_1)\dots(x-x_n)|\]
+\end{itemize}
+
+\section{Funkcje sklejane}
+\begin{itemize}
+    \item \textbf{Funkcja sklejana stopnia k: }Funkcję $S$ nazywamy funkcją sklejaną stopnia $k$ jeżeli:
+    \begin{enumerate}
+        \item $[a,b]$ jest dziedziną funckji $S$
+        \item $S, S', S'', \dots , S^{(k-1)}$ są funkcjami ciągłymi na $[a,b]$
+        \item Istnieje taki podział przedziału $a=t_0<t_1<\dots<t_n=b$ dla którego $S$ jest wielomianem stopnia co najwyżej k na każdym popprzedziale $[t_i, t_{i+1}]$
+    \end{enumerate}
+\end{itemize}
+
+\section{Kwadratury}
+\begin{itemize}
+    \item \textbf{Prosty wzór trapezów: }
+    \[S(f) = \frac{b-a}{2}(f(a)+f(b))\]
+    \item  \textbf{Prosty wzór Simpsona - parabol: }
+    \[S(f) = \frac{b-a}{6}(f(a) + 4f(\frac{a+b}{2}) + f(b))\]
+\end{itemize}
 \end{document}
